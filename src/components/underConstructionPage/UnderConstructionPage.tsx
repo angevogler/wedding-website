@@ -37,6 +37,11 @@ const FullSizeLogo = styled.img`
 const H1 = styled.h1`
     font-family: ${fontFamily.playfairDisplaySC};
     color: ${color.mainPalette.green80};
+    font-size: 1.75rem;
+
+    @media only screen and (min-width: ${breakpoints.small}) {
+        font-size: 2rem;
+      }
 `
 
 export default UnderConstructionPage
