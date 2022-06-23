@@ -4,25 +4,24 @@ import styled from 'styled-components'
 import fullsizeLogo from '../../assets/logos/wedding-logo-full.svg'
 import collapsedLogo from '../../assets/logos/wedding-logo-collapsed.svg'
 
-import { breakpoints } from '../../styles/theme'
+import { breakpoints, color } from '../../styles/theme'
 
-const isMobile = window.innerWidth < 600;
+export interface HeaderProps {
+    shrinkHeader: boolean;
+}
 
-const Header: React.FC = () => {
-    const [showFullLogo, setShowFullLogo] = useState<boolean>(isMobile ? false : true)
-
-    useEffect(() => {
-
-    }, [])
-
+// TODO: add animation when the logo changes size
+const Header: React.FC<HeaderProps> = ({ shrinkHeader }) => {
     return (
         <HeaderContainer>
-            {showFullLogo
+            <LogoContainer>
+            {shrinkHeader
             ? (
-                <FullSizeLogo src={fullsizeLogo} alt="logo"/>
-            ) : (
                 <CollapsedLogo src={collapsedLogo} alt="logo"/>
+            ) : (
+                <FullSizeLogo src={fullsizeLogo} alt="logo"/>
             )}
+            </LogoContainer>
         </HeaderContainer>
     )
 }
@@ -30,13 +29,21 @@ const Header: React.FC = () => {
 const HeaderContainer = styled.div`
     display: flex;
     justify-content: center;
-    margin: 48px 0;
+`
+
+const LogoContainer = styled.div`
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: ${color.mainPalette.neutral0};
 `
 
 const FullSizeLogo = styled.img`
     width: 350px;
 
     @media only screen and (min-width: ${breakpoints.small}) {
+        margin: 72px 0;
         height: 450px;
         width: 100%;
       }
