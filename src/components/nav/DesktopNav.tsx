@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import { useLocation, useNavigate } from 'react-router-dom'
 
-import { breakpoints } from '../../styles/theme'
+import { breakpoints, color } from '../../styles/theme'
 
 import { TabList, TabTitle } from '../Tabs'
 import { collapsedLogoHeight, expandedLogoHeight } from '../../App'
@@ -66,6 +66,7 @@ const DesktopNav: React.FC<DesktopNavProps> = ({ shrinkHeader }) => {
                     />
                 ))}
             </TabList>
+            <NavBorder />
         </NavContainer>
     )
 }
@@ -80,7 +81,15 @@ const NavContainer = styled.div<{shrinkHeader: boolean}>`
         left: 0;
         right: 0;
         padding: 0 72px;
+        background-color: ${color.mainPalette.neutral0};
     }
+`
+
+const NavBorder = styled.div`
+    width: calc(100vw - 144px); // screen width - padding
+    background-color: ${color.mainPalette.coral20};
+    height: 1px;
+    margin-top: -2px;
 `
 
 export default DesktopNav

@@ -63,7 +63,6 @@ const AppWrapper = styled.div`
 
 const ContentWrapper = styled.div<{shrinkHeader: boolean}>`
   margin-top: ${props => props.shrinkHeader ? `${smallerHeaderSize}px` : `${largeHeaderSize}px`};
-  background-color: coral;
   height: 3000px;
   display: flex;
   flex-direction: column;
