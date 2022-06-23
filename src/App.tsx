@@ -1,12 +1,14 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import styled from 'styled-components'
+import { BrowserRouter as Router } from 'react-router-dom'
 
 import GlobalFonts from './assets/fonts/fonts'
 import { Header } from './components/header';
+import DesktopNav from './components/nav/DesktopNav';
 
 const isMobile = window.innerWidth < 600;
-const largeHeaderSize = 594;
-const smallerHeaderSize = 179;
+export const largeHeaderSize = 594;
+export const smallerHeaderSize = 179;
 
 function App() {
   const [shrinkHeader, setShrinkHeader] = useState<boolean>(isMobile ? true : false)
@@ -32,11 +34,15 @@ function App() {
   return (
     <AppWrapper>
       <GlobalFonts />
-      <Header shrinkHeader={shrinkHeader} />
-      <ContentWrapper shrinkHeader={shrinkHeader}>
-        <h1>TOP</h1>
-        <h1>BOTTOM</h1>
-      </ContentWrapper>
+      <Router basename="/">
+        <Header shrinkHeader={shrinkHeader} />
+        <DesktopNav shrinkHeader={shrinkHeader} />
+
+        <ContentWrapper shrinkHeader={shrinkHeader}>
+          <h1>TOP</h1>
+          <h1>BOTTOM</h1>
+        </ContentWrapper>
+      </Router>
     </AppWrapper>
   );
 }
