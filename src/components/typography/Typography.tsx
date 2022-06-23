@@ -1,5 +1,11 @@
 import styled from 'styled-components'
-import { fontFamily, breakpoints, color } from '../../styles/theme'
+import { fontFamily, color } from '../../styles/theme'
+
+const FancyH1 = styled.h1`
+    font-family: 'Brittany Signature';
+    font-size: 2.75rem;
+    color: ${color.mainPalette.green80};
+`
 
 const H1 = styled.h1`
     font-family: ${fontFamily.playfairDisplaySC};
@@ -58,6 +64,7 @@ const BodySmall = styled.p`
 `
 
 export {
+    FancyH1,
     H1,
     H2,
     H3,

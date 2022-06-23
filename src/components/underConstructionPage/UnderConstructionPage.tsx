@@ -4,13 +4,13 @@ import styled from 'styled-components'
 import fullsizeLogo from '../../assets/logos/wedding-logo-full.svg'
 
 import { breakpoints } from '../../styles/theme'
-import { H1 } from '../typography'
+import { FancyH1 } from '../typography'
 
 
 const UnderConstructionPage: React.FC = () => (
     <PageContainer>
         <FullSizeLogo src={fullsizeLogo} alt="logo"/>
-        <H1>Website Coming Soon</H1>
+        <FancyH1>Website Coming Soon</FancyH1>
     </PageContainer>
 )
 
