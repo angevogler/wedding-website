@@ -2,13 +2,13 @@ import React from 'react';
 import styled from 'styled-components'
 
 import GlobalFonts from './assets/fonts/fonts'
-import { UnderConstructionPage } from './components/underConstructionPage';
+import { Header } from './components/header';
 
 function App() {
   return (
     <Wrapper>
       <GlobalFonts />
-      <UnderConstructionPage />
+      <Header />
     </Wrapper>
   );
 }
