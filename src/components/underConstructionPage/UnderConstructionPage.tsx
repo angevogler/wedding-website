@@ -3,7 +3,8 @@ import styled from 'styled-components'
 
 import fullsizeLogo from '../../assets/logos/wedding-logo-full.svg'
 
-import { breakpoints, fontFamily, color } from '../../styles/theme'
+import { breakpoints } from '../../styles/theme'
+import { H1 } from '../typography'
 
 
 const UnderConstructionPage: React.FC = () => (
@@ -31,16 +32,6 @@ const FullSizeLogo = styled.img`
     @media only screen and (min-width: ${breakpoints.small}) {
         height: 450px;
         width: 100%;
-      }
-`
-
-const H1 = styled.h1`
-    font-family: ${fontFamily.playfairDisplaySC};
-    color: ${color.mainPalette.green80};
-    font-size: 1.75rem;
-
-    @media only screen and (min-width: ${breakpoints.small}) {
-        font-size: 2rem;
       }
 `
 
