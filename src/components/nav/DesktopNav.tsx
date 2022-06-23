@@ -11,7 +11,7 @@ const tabs = [
     {
         id: 0,
         title: 'Home',
-        url: '',
+        url: '/',
     },
     {
         id: 1,
