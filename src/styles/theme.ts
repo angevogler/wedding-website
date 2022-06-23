@@ -15,6 +15,15 @@ export interface Theme {
         coral60: string
       }
       extendedPalette: {
+        lightNeutrals: {
+          neutral0: string
+          neutral20: string
+          neutral40: string
+        }
+        darkNeutrals: {
+          neutral50: string
+          neutral60: string
+        }
         green: {
           green20: string
           green40: string
@@ -82,6 +91,16 @@ export interface Theme {
       coral60: '#E47171',
     },
     extendedPalette: {
+      lightNeutrals: {
+        neutral0: '#FFFFFF',
+        neutral20: '#F9FBFF',
+        neutral30: '#E5E9F1',
+        neutral40: '#DDE1EC',
+      },
+      darkNeutrals: {
+        neutral50: '#A5B5D0',
+        neutral60: '#72829D',
+      },
       green: {
         green20: '#E1EADA',
         green40: '#A0B58A',

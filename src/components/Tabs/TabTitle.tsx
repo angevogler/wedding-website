@@ -3,6 +3,9 @@ import styled from 'styled-components'
 
 import { color } from '../../styles/theme'
 
+import { BodyLarge } from '../typography'
+import { Button, ButtonVariant } from '../button'
+
 type TabListItemProps = Pick<TabTitleProps, 'active'>
 const TabListItem = styled.li<TabListItemProps>`
   &:after {
@@ -27,7 +30,7 @@ export interface TabTitleProps {
 
 type TabButtonProps = Pick<TabTitleProps, 'selected'> &
   Pick<HTMLButtonElement, 'title'>
-const TabButton = styled.button<TabButtonProps>`
+const TabButton = styled(Button)<TabButtonProps>`
   color: ${color.mainPalette.green80};
   white-space: nowrap;
   font-weight: bold;
@@ -49,11 +52,14 @@ const TabTitle: React.FC<TabTitleProps> = ({
   }) => (
     <TabListItem className={className} active={active}>
       <TabButton
+        variant={ButtonVariant.TEXT}
         onClick={setSelectedTab}
         selected={selected}
         title={title || ''}
       >
+        <BodyLarge>
         {title}
+        </BodyLarge>
       </TabButton>
     </TabListItem>
   )

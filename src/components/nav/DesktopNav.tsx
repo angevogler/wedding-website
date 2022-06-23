@@ -5,7 +5,7 @@ import { useLocation, useNavigate } from 'react-router-dom'
 import { breakpoints } from '../../styles/theme'
 
 import { TabList, TabTitle } from '../Tabs'
-import { largeHeaderSize, smallerHeaderSize } from '../../App'
+import { collapsedLogoHeight, expandedLogoHeight } from '../../App'
 
 const tabs = [
     {
@@ -76,7 +76,10 @@ const NavContainer = styled.div<{shrinkHeader: boolean}>`
     @media only screen and (min-width: ${breakpoints.small}) {
         display: block;
         position: fixed;
-        top: ${props => props.shrinkHeader ? `${smallerHeaderSize}px` : `${largeHeaderSize}px`}
+        top: ${props => props.shrinkHeader ? `${collapsedLogoHeight}px` : `${expandedLogoHeight}px`};
+        left: 0;
+        right: 0;
+        padding: 0 72px;
     }
 `
 

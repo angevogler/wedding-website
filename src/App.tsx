@@ -7,8 +7,14 @@ import { Header } from './components/header';
 import DesktopNav from './components/nav/DesktopNav';
 
 const isMobile = window.innerWidth < 600;
-export const largeHeaderSize = 594;
-export const smallerHeaderSize = 179;
+
+export const expandedLogoHeight = 594;
+export const collapsedLogoHeight = 175;
+
+export const desktopNavHeight = 59;
+
+export const largeHeaderSize = expandedLogoHeight + desktopNavHeight;
+export const smallerHeaderSize = collapsedLogoHeight + desktopNavHeight;
 
 function App() {
   const [shrinkHeader, setShrinkHeader] = useState<boolean>(isMobile ? true : false)
