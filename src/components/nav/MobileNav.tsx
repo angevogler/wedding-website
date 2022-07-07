@@ -1,21 +1,31 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styled from 'styled-components'
 
 import initialsOnlyLogo from '../../assets/logos/wedding-logo-initials-only.svg'
 
 import { color } from '../../styles/theme'
 import { Button, ButtonVariant } from '../button'
+import { Drawer } from '../drawer'
+import { BodyLarge } from '../typography'
 
 const MobileNav = () => {
+    const [showNavDrawer, setShowNavDrawer] = useState(false)
+
     return (
-        <MobileNavContainer>
-            <NavButton variant={ButtonVariant.TEXT}>
-                <MenuIcon className="material-icons">menu</MenuIcon>
-            </NavButton>
-            <LogoContainer>
-                <InitialsOnlyLogo src={initialsOnlyLogo} alt="logo" />
-            </LogoContainer>
-        </MobileNavContainer>
+        <>
+            <MobileNavContainer>
+                <NavButton variant={ButtonVariant.TEXT} onClick={() => setShowNavDrawer(true)}>
+                    <MenuIcon className="material-icons">menu</MenuIcon>
+                </NavButton>
+                <LogoContainer>
+                    <InitialsOnlyLogo src={initialsOnlyLogo} alt="logo" />
+                </LogoContainer>
+            </MobileNavContainer>
+
+            <Drawer open={showNavDrawer} onClose={() => setShowNavDrawer(false)}>
+                <BodyLarge>This is the nav drawer</BodyLarge>
+            </Drawer>
+        </>
     )
 }
 
