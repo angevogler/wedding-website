@@ -48,9 +48,7 @@ const NavButton = styled(Button)`
     margin-bottom: auto;
 `
 
-const MenuIcon = styled.i`
-
-`
+const MenuIcon = styled.i``
 
 const LogoContainer = styled.div`
     margin-left: auto;
