@@ -10,7 +10,7 @@ const MobileNav = () => {
     return (
         <MobileNavContainer>
             <NavButton variant={ButtonVariant.TEXT}>
-                X
+                <MenuIcon className="material-icons">menu</MenuIcon>
             </NavButton>
             <LogoContainer>
                 <InitialsOnlyLogo src={initialsOnlyLogo} alt="logo" />
@@ -26,16 +26,22 @@ const MobileNavContainer = styled.div`
     right: 0;
     height: 72px;
     border-bottom: 1px solid ${color.mainPalette.green40};
-    padding: 4px 0;
+    padding: 4px 8px;
     display: grid;
-    grid-template-columns: 24px auto 24px;
+    grid-template-columns: 44px auto 44px;
 `
 
 const NavButton = styled(Button)`
     color: ${color.mainPalette.green40};
-    height: 24px;
-    width: 24px;
-    padding: 12px;
+    height: 36px;
+    width: 36px;
+    padding: 6px;
+    margin-top: auto;
+    margin-bottom: auto;
+`
+
+const MenuIcon = styled.i`
+
 `
 
 const LogoContainer = styled.div`
