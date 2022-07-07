@@ -4,7 +4,7 @@ import { BrowserRouter as Router } from 'react-router-dom'
 
 import GlobalFonts from './assets/fonts/fonts'
 import { Header } from './components/header';
-import DesktopNav from './components/nav/DesktopNav';
+import { DesktopNav, MobileNav } from './components/nav';
 
 const isMobile = window.innerWidth < 600;
 
@@ -41,13 +41,19 @@ function App() {
     <AppWrapper>
       <GlobalFonts />
       <Router basename="/">
-        <Header shrinkHeader={shrinkHeader} />
-        <DesktopNav shrinkHeader={shrinkHeader} />
+        {isMobile ? (
+          <MobileNav />
+        ) : (
+          <>
+            <Header shrinkHeader={shrinkHeader} />
+            <DesktopNav shrinkHeader={shrinkHeader} />
+          </>
+        )}
 
-        <ContentWrapper shrinkHeader={shrinkHeader}>
+        {/* <ContentWrapper shrinkHeader={shrinkHeader}>
           <h1>TOP</h1>
           <h1>BOTTOM</h1>
-        </ContentWrapper>
+        </ContentWrapper> */}
       </Router>
     </AppWrapper>
   );
