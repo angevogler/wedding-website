@@ -5,8 +5,7 @@ import initialsOnlyLogo from '../../assets/logos/wedding-logo-initials-only.svg'
 
 import { color } from '../../styles/theme'
 import { Button, ButtonVariant } from '../button'
-import { Drawer } from '../drawer'
-import { BodyLarge } from '../typography'
+import MobileNavDrawer from './MobileNavDrawer'
 
 const MobileNav = () => {
     const [showNavDrawer, setShowNavDrawer] = useState(false)
@@ -22,9 +21,8 @@ const MobileNav = () => {
                 </LogoContainer>
             </MobileNavContainer>
 
-            <Drawer open={showNavDrawer} onClose={() => setShowNavDrawer(false)}>
-                <BodyLarge>This is the nav drawer</BodyLarge>
-            </Drawer>
+            <MobileNavDrawer open={showNavDrawer} onClose={() => setShowNavDrawer(false)}
+            />
         </>
     )
 }
