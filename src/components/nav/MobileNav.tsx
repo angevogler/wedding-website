@@ -21,7 +21,9 @@ const MobileNav = () => {
                 </LogoContainer>
             </MobileNavContainer>
 
-            <MobileNavDrawer open={showNavDrawer} onClose={() => setShowNavDrawer(false)}
+            <MobileNavDrawer
+                open={showNavDrawer}
+                onClose={() => setShowNavDrawer(false)}
             />
         </>
     )
