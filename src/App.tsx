@@ -41,14 +41,9 @@ function App() {
     <AppWrapper>
       <GlobalFonts />
       <Router basename="/">
-        {isMobile ? (
           <MobileNav />
-        ) : (
-          <>
-            <Header shrinkHeader={shrinkHeader} />
-            <DesktopNav shrinkHeader={shrinkHeader} />
-          </>
-        )}
+          <Header shrinkHeader={shrinkHeader} />
+          <DesktopNav shrinkHeader={shrinkHeader} />
 
         {/* <ContentWrapper shrinkHeader={shrinkHeader}>
           <h1>TOP</h1>

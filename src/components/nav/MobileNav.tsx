@@ -3,7 +3,7 @@ import styled from 'styled-components'
 
 import initialsOnlyLogo from '../../assets/logos/wedding-logo-initials-only.svg'
 
-import { color } from '../../styles/theme'
+import { color, breakpoints } from '../../styles/theme'
 import { Button, ButtonVariant } from '../button'
 import MobileNavDrawer from './MobileNavDrawer'
 
@@ -39,6 +39,10 @@ const MobileNavContainer = styled.div`
     padding: 4px 8px;
     display: grid;
     grid-template-columns: 44px auto 44px;
+
+    @media only screen and (min-width: ${breakpoints.small}) {
+        display: none;
+    }
 `
 
 const NavButton = styled(Button)`

@@ -27,6 +27,10 @@ const Header: React.FC<HeaderProps> = ({ shrinkHeader }) => {
 }
 
 const HeaderContainer = styled.div`
+    @media only screen and (max-width: ${breakpoints.small}) {
+        display: none;
+    }
+
     display: flex;
     justify-content: center;
 `
