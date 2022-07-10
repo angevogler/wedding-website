@@ -29,7 +29,7 @@ export interface TabTitleProps {
     selected?: boolean
   }
 
-type TabButtonProps = Pick<TabTitleProps, 'selected'> &
+export type TabButtonProps = Pick<TabTitleProps, 'selected'> &
   Pick<HTMLButtonElement, 'title'>
 const TabButton = styled(Button)<TabButtonProps>`
   color: ${color.mainPalette.green80};

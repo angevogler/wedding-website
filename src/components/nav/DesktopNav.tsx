@@ -6,44 +6,7 @@ import { breakpoints, color } from '../../styles/theme'
 
 import { TabList, TabTitle } from '../Tabs'
 import { collapsedLogoHeight, expandedLogoHeight } from '../../App'
-
-const tabs = [
-    {
-        id: 0,
-        title: 'Home',
-        url: '/',
-    },
-    {
-        id: 1,
-        title: 'Events',
-        url: '/events',
-    },
-    {
-        id: 2,
-        title: 'Explore Asheville',
-        url: '/explore-asheville',
-    },
-    {
-        id: 3,
-        title: 'FAQ',
-        url: '/faq',
-    },
-    {
-        id: 4,
-        title: 'Registry',
-        url: '/registry',
-    },
-    {
-        id: 5,
-        title: 'Accomodations',
-        url: '/accomodations',
-    },
-    {
-        id: 6,
-        title: 'Gallery',
-        url: '/gallery',
-    },
-]
+import { navigationTabs } from '../../utilities/navigation'
 
 export interface DesktopNavProps {
     shrinkHeader: boolean
@@ -56,7 +19,7 @@ const DesktopNav: React.FC<DesktopNavProps> = ({ shrinkHeader }) => {
     return (
         <NavContainer shrinkHeader={shrinkHeader}>
             <TabList>
-                {tabs.map((t) => (
+                {navigationTabs.map((t) => (
                     <TabTitle
                         key={t.id}
                         title={t.title}
