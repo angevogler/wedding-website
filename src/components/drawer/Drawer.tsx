@@ -19,14 +19,25 @@ const Drawer: FC<DrawerProps> = ({
     })
     
     return (
+      <>
+        {open && <Overlay />
+}
         <StyledDrawer
             ref={clickAwayRef}
             open={open}
         >
             {open && children}
         </StyledDrawer>
+        </>
     )
 }
+
+const Overlay = styled.div`
+  height: 100vh;
+  width: 100vh;
+  background-color: rgba(0, 52, 10, 0.35);
+  z-index: 1;
+`
 
 const StyledDrawer = styled.div<Partial<DrawerProps>>`
   position: fixed;
