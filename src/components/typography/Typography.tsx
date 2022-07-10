@@ -5,6 +5,8 @@ const FancyH1 = styled.h1`
     font-family: 'Brittany Signature';
     font-size: 2.75rem;
     color: ${color.mainPalette.green80};
+    margin: 24px 0;
+
 `
 
 const H1 = styled.h1`
