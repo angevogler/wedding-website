@@ -9,29 +9,29 @@ export const navigationTabs = [
         title: 'Events',
         url: '/events',
     },
-    {
-        id: 2,
-        title: 'Explore Asheville',
-        url: '/explore-asheville',
-    },
+    // {
+    //     id: 2,
+    //     title: 'Explore Asheville',
+    //     url: '/explore-asheville',
+    // },
     {
         id: 3,
         title: 'FAQ',
         url: '/faq',
     },
-    {
-        id: 4,
-        title: 'Registry',
-        url: '/registry',
-    },
-    {
-        id: 5,
-        title: 'Accomodations',
-        url: '/accomodations',
-    },
-    {
-        id: 6,
-        title: 'Gallery',
-        url: '/gallery',
-    },
+    // {
+    //     id: 4,
+    //     title: 'Registry',
+    //     url: '/registry',
+    // },
+    // {
+    //     id: 5,
+    //     title: 'Accomodations',
+    //     url: '/accomodations',
+    // },
+    // {
+    //     id: 6,
+    //     title: 'Gallery',
+    //     url: '/gallery',
+    // },
 ]
