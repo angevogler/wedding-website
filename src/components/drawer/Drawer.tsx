@@ -2,7 +2,7 @@ import React, { FC, useRef } from 'react'
 import styled from 'styled-components'
 
 import { useClickAway } from '../../hooks'
-import { boxShadow, breakpoints, color } from '../../styles/theme'
+import { boxShadow, color } from '../../styles/theme'
 
 import { DrawerProps } from './Drawer.types'
 

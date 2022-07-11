@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import fullsizeLogo from '../../assets/logos/wedding-logo-full.svg'
+// import fullsizeLogo from '../../assets/logos/wedding-logo-full.svg'
 import collapsedLogo from '../../assets/logos/wedding-logo-collapsed.svg'
 
 import { breakpoints, color } from '../../styles/theme'
@@ -46,15 +46,15 @@ const LogoContainer = styled.div`
     background-color: ${color.mainPalette.neutral0};
 `
 
-const FullSizeLogo = styled.img`
-    width: 350px;
+// const FullSizeLogo = styled.img`
+//     width: 350px;
 
-    @media only screen and (min-width: ${breakpoints.small}) {
-        margin: 72px 0;
-        height: 450px;
-        width: 100%;
-      }
-`
+//     @media only screen and (min-width: ${breakpoints.small}) {
+//         margin: 72px 0;
+//         height: 450px;
+//         width: 100%;
+//       }
+// `
 
 const CollapsedLogo = styled.img`
     width: 250px;

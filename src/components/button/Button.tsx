@@ -2,7 +2,6 @@ import React, { forwardRef } from 'react'
 import styled, {
   css,
   FlattenSimpleInterpolation,
-  StyledComponent,
 } from 'styled-components'
 import { color } from '../../styles/theme'
 import {
