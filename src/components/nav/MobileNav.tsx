@@ -7,7 +7,7 @@ import { color, breakpoints } from '../../styles/theme'
 import { Button, ButtonVariant } from '../button'
 import MobileNavDrawer from './MobileNavDrawer'
 
-const MobileNav = () => {
+const MobileNav: React.FC = () => {
     const [showNavDrawer, setShowNavDrawer] = useState(false)
 
     return (
@@ -40,6 +40,7 @@ const MobileNavContainer = styled.div`
     display: grid;
     grid-template-columns: 44px auto 44px;
     background-color: ${color.mainPalette.neutral0};
+    z-index: 1;
 
     @media only screen and (min-width: ${breakpoints.small}) {
         display: none;
