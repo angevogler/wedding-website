@@ -92,11 +92,11 @@ const AppWrapper = styled.div`
 
 const ContentWrapper = styled.div<{shrinkHeader: boolean}>`
   margin-top: 81px;
-  padding: 0 8px;
+  padding: 16px 8px;
   @media only screen and (min-width: ${breakpoints.small}) {
     // margin-top: ${props => props.shrinkHeader ? `${smallerHeaderSize}px` : `${largeHeaderSize}px`};
     margin-top: ${smallerHeaderSize}px;  
-    padding: 0 72px
+    padding: 48px 72px 72px;
   }
 `
 
