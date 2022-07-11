@@ -11,6 +11,8 @@ import summerFall2020Image1Small from '../../../assets/photos/summer-fall-2020-s
 import summerFall2020Image1 from '../../../assets/photos/summer-fall-2020.jpg'
 import summerFall2020Image2Small from '../../../assets/photos/summer-fall-2020-2-small.jpeg'
 import summerFall2020Image2 from '../../../assets/photos/summer-fall-2020-2.jpg'
+import engagementImageSmall from '../../../assets/photos/engagement-photo-small.jpeg'
+import engagementImage from '../../../assets/photos/engagement-photo.jpg'
 
 import { color, breakpoints } from '../../../styles/theme'
 
@@ -116,6 +118,7 @@ const DesktopTimeline: React.FC = () => (
                 <TimelineItem
                     position={timelineItems[3].position}
                     isAlternating
+                    hasOppositeContent
                 >
                     <TimelineContent position={timelineItems[3].position}>
                         <StyledH3>{timelineItems[3].title}</StyledH3>
@@ -125,6 +128,13 @@ const DesktopTimeline: React.FC = () => (
                         <TimelineConnectorDot />
                         <TimelineConnector />
                     </TimelineSeparator>
+                    <TimelineContent position={TimelineContentPosition.RIGHT}>
+                        <EngagementPhotoImage
+                            src={engagementImage}
+                            placeholderSrc={engagementImageSmall}
+                            alt="engagement-img"
+                        />
+                    </TimelineContent>
                 </TimelineItem>
 
                 <TimelineItem
@@ -184,6 +194,10 @@ const SummerFall2020Image2 = styled(ProgressiveImage)`
     width: 275px;
     margin-top: -50px;
     margin-left: 90px;
+`
+
+const EngagementPhotoImage = styled(ProgressiveImage)`
+    width: 275px;
 `
 
 export default DesktopTimeline
