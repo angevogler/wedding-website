@@ -17,7 +17,6 @@ import {
     TimelineConnector,
     TimelineConnectorDot,
 } from '../../timeline'
-import { TimelineContentPosition } from '../../timeline/TimelineContent'
 
 const HomePage: React.FC = () => (
     <HomePageContainer>
@@ -53,14 +52,6 @@ const HomePageContainer = styled.div`
     align-items: center;
     justify-content: center;
     text-align: center;
-`
-
-const DesktopTimelineContainer = styled.div`
-    display: none;
-
-    @media only screen and (min-width: ${breakpoints.small}) {
-        display: block;
-    }
 `
 
 const MobileTimelineContainer = styled.div`
