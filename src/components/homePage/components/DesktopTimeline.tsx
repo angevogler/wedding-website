@@ -7,6 +7,10 @@ import fall2017Image1Small from '../../../assets/photos/fall-2017-1-small.jpeg'
 import fall2017Image1 from '../../../assets/photos/fall-2017-1.jpg'
 import fall2017Image2Small from '../../../assets/photos/fall-2017-2-small.jpeg'
 import fall2017Image2 from '../../../assets/photos/fall-2017-2.jpg'
+import summerFall2020Image1Small from '../../../assets/photos/summer-fall-2020-small.jpeg'
+import summerFall2020Image1 from '../../../assets/photos/summer-fall-2020.jpg'
+import summerFall2020Image2Small from '../../../assets/photos/summer-fall-2020-2-small.jpeg'
+import summerFall2020Image2 from '../../../assets/photos/summer-fall-2020-2.jpg'
 
 import { color, breakpoints } from '../../../styles/theme'
 
@@ -83,7 +87,22 @@ const DesktopTimeline: React.FC = () => (
                 <TimelineItem
                     position={timelineItems[2].position}
                     isAlternating
+                    hasOppositeContent
                 >
+                    <TimelineContent position={TimelineContentPosition.RIGHT}>
+                        <SummerFall2020Container>
+                            <SummerFall2020Image1
+                                src={summerFall2020Image2}
+                                placeholderSrc={summerFall2020Image2Small}
+                                alt="summer-fall-2020-img-2"
+                            />
+                            <SummerFall2020Image2
+                                src={summerFall2020Image1}
+                                placeholderSrc={summerFall2020Image1Small}
+                                alt="summer-fall-2020-img-1"
+                            />
+                        </SummerFall2020Container>
+                    </TimelineContent>
                     <TimelineSeparator>
                         <TimelineConnectorDot />
                         <TimelineConnector />
@@ -140,11 +159,10 @@ const StyledH3 = styled(H3)`
 
 const Fall2016Image = styled(ProgressiveImage)`
     width: 275px;
+    margin-left: 90px;
 `
 
-const Fall2017Container = styled.div`
-    position: relative;
-`
+const Fall2017Container = styled.div``
 
 const Fall2017Image1 = styled(ProgressiveImage)`
     width: 275px;
@@ -154,6 +172,18 @@ const Fall2017Image2 = styled(ProgressiveImage)`
     width: 275px;
     margin-top: -50px;
     margin-left: 225px;
+`
+
+const SummerFall2020Container = styled.div``
+
+const SummerFall2020Image1 = styled(ProgressiveImage)`
+    width: 275px;
+`
+
+const SummerFall2020Image2 = styled(ProgressiveImage)`
+    width: 275px;
+    margin-top: -50px;
+    margin-left: 90px;
 `
 
 export default DesktopTimeline
