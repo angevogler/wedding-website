@@ -3,6 +3,10 @@ import styled from 'styled-components'
 
 import fall2016Small from '../../../assets/photos/fall-2016-small.jpg'
 import fall2016 from '../../../assets/photos/fall-2016.jpg'
+import fall2017Image1Small from '../../../assets/photos/fall-2017-1-small.jpeg'
+import fall2017Image1 from '../../../assets/photos/fall-2017-1.jpg'
+import fall2017Image2Small from '../../../assets/photos/fall-2017-2-small.jpeg'
+import fall2017Image2 from '../../../assets/photos/fall-2017-2.jpg'
 
 import { color, breakpoints } from '../../../styles/theme'
 
@@ -50,6 +54,7 @@ const DesktopTimeline: React.FC = () => (
                 <TimelineItem
                     position={timelineItems[1].position}
                     isAlternating
+                    hasOppositeContent
                 >
                     <TimelineContent position={timelineItems[1].position}>
                         <StyledH3>{timelineItems[1].title}</StyledH3>
@@ -59,6 +64,20 @@ const DesktopTimeline: React.FC = () => (
                         <TimelineConnectorDot />
                         <TimelineConnector />
                     </TimelineSeparator>
+                    <TimelineContent position={TimelineContentPosition.RIGHT}>
+                        <Fall2017Container>
+                            <Fall2017Image1
+                                src={fall2017Image1}
+                                placeholderSrc={fall2017Image1Small}
+                                alt="fall-2017-img-1"
+                            />
+                            <Fall2017Image2
+                                src={fall2017Image2}
+                                placeholderSrc={fall2017Image2Small}
+                                alt="fall-2017-img-2"
+                            />
+                        </Fall2017Container>
+                    </TimelineContent>
                 </TimelineItem>
 
                 <TimelineItem
@@ -121,6 +140,20 @@ const StyledH3 = styled(H3)`
 
 const Fall2016Image = styled(ProgressiveImage)`
     width: 275px;
+`
+
+const Fall2017Container = styled.div`
+    position: relative;
+`
+
+const Fall2017Image1 = styled(ProgressiveImage)`
+    width: 275px;
+`
+
+const Fall2017Image2 = styled(ProgressiveImage)`
+    width: 275px;
+    margin-top: -50px;
+    margin-left: 225px;
 `
 
 export default DesktopTimeline
