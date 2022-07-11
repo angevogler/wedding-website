@@ -6,7 +6,13 @@ import { color } from '../../styles/theme'
 import { timelineItems } from './timelineItems'
 
 import { BodyLarge, H3, FancyH1 } from '../typography'
-import { Timeline, TimelineItem, TimelineItemContent } from '../timeline'
+import {
+    Timeline,
+    TimelineItem,
+    TimelineContent,
+    TimelineSeparator,
+    TimelineConnector,
+} from '../timeline'
 
 const HomePage: React.FC = () => (
     <HomePageContainer>
@@ -14,10 +20,13 @@ const HomePage: React.FC = () => (
         <Timeline>
             {timelineItems.map(item => (
                 <TimelineItem key={item.index}>
-                    <TimelineItemContent>
+                    <TimelineSeparator>
+                        <TimelineConnector />
+                    </TimelineSeparator>
+                    <TimelineContent>
                         <StyledH3>{item.title}</StyledH3>
                         <BodyLarge>{item.content}</BodyLarge>
-                    </TimelineItemContent>
+                    </TimelineContent>
                 </TimelineItem>
             ))}
         </Timeline>
