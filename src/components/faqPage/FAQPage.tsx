@@ -23,7 +23,7 @@ const FAQPage: React.FC = () => {
 
             <AdditionalQuestions>
                 <H3>Still have questions?</H3>
-                <BodyLarge>If you cannot find the answer to your question in our FAQs, please reach email us at daveandangewedding@gmail.com</BodyLarge>
+                <BodyLarge>If you cannot find the answer to your question in our FAQs, please email us at daveandangewedding@gmail.com</BodyLarge>
                 <BodyLarge>We will get back to you as soon as possible!</BodyLarge>
             </AdditionalQuestions>
         </FAQPageRoot>
