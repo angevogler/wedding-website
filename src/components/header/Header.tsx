@@ -35,6 +35,7 @@ const HeaderContainer = styled.div`
 
     display: flex;
     justify-content: center;
+    z-index: 1;
 `
 
 const LogoContainer = styled.div`

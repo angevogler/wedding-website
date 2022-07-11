@@ -46,6 +46,7 @@ const NavContainer = styled.div<{shrinkHeader: boolean}>`
         right: 0;
         padding: 0 72px;
         background-color: ${color.mainPalette.neutral0};
+        z-index: 1;
     }
 `
 
