@@ -19,7 +19,7 @@ export const largeHeaderSize = expandedLogoHeight + desktopNavHeight;
 export const smallerHeaderSize = collapsedLogoHeight + desktopNavHeight;
 
 const HomePage = lazy(
-  () => import('./components/homePage/HomePage')
+  () => import('./components/homePage/components/HomePage')
 )
 
 const EventsPage = lazy(
@@ -92,11 +92,14 @@ const AppWrapper = styled.div`
 
 const ContentWrapper = styled.div<{shrinkHeader: boolean}>`
   margin-top: 81px;
-  padding: 16px 8px;
+  padding: 16px;
+  padding-top: 0;
+
   @media only screen and (min-width: ${breakpoints.small}) {
     // margin-top: ${props => props.shrinkHeader ? `${smallerHeaderSize}px` : `${largeHeaderSize}px`};
     margin-top: ${smallerHeaderSize}px;  
-    padding: 48px 72px 72px;
+    padding: 72px;
+    padding-top: 0;
   }
 `
 

@@ -1,11 +1,13 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import { color, breakpoints } from '../../styles/theme'
+import { color, breakpoints } from '../../../styles/theme'
 
-import { timelineItems } from './timelineItems'
+import { timelineItems } from '../timelineItems'
 
-import { BodyLarge, H3, FancyH1 } from '../typography'
+import { BodyLarge, H3, FancyH1 } from '../../typography'
+
+import WelcomeMessage from './WelcomeMessage'
 import {
     Timeline,
     TimelineItem,
@@ -13,11 +15,12 @@ import {
     TimelineSeparator,
     TimelineConnector,
     TimelineConnectorDot,
-} from '../timeline'
-import { TimelineContentPosition } from '../timeline/TimelineContent'
+} from '../../timeline'
+import { TimelineContentPosition } from '../../timeline/TimelineContent'
 
 const HomePage: React.FC = () => (
     <HomePageContainer>
+        <WelcomeMessage/>
         <FancyH1>Our Story</FancyH1>
         <DesktopTimelineContainer>
             <Timeline>
