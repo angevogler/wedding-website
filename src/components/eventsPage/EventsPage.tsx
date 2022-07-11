@@ -7,7 +7,7 @@ const EventsPage: React.FC = () => (
         <FancyH1>Events</FancyH1>
         <StyledH5>Saturday, April 29th</StyledH5>
         <BodyLarge>
-            5:30 Ceremony at Highland Brewing Events Center
+            5:30pm - Ceremony at Highland Brewing Events Center
         </BodyLarge>
         <AddressContainer>
             <BodyLarge>12 Old Charlotte Highway #200</BodyLarge>
