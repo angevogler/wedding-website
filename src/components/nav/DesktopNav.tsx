@@ -41,7 +41,7 @@ const NavContainer = styled.div<{shrinkHeader: boolean}>`
         display: block;
         position: fixed;
         // top: ${props => props.shrinkHeader ? `${collapsedLogoHeight}px` : `${expandedLogoHeight}px`};
-        top: ${collapsedLogoHeight}px;
+        top: 175px;
         left: 0;
         right: 0;
         padding: 0 72px;
