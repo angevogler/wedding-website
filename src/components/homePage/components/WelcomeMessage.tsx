@@ -4,7 +4,7 @@ import styled from 'styled-components'
 import backgroundSmall from '../../../assets/photos/welcome-message-background-small.jpeg'
 import background from '../../../assets/photos/welcome-message-background.jpg'
 
-import { breakpoints, color } from '../../../styles/theme'
+import { breakpoints } from '../../../styles/theme'
 
 import { ProgressiveImage } from '../../progressiveImage'
 import { BodyLarge } from '../../typography'
@@ -15,8 +15,6 @@ const WelcomeMessage: React.FC = () => (
             src={background}
             placeholderSrc={backgroundSmall}
             alt={'welcome-message-background'}
-            width="100%"
-            height="100%"
         />
         <WelcomeTextContainer>
             <BodyLarge>

@@ -5,16 +5,12 @@ export interface ProgressiveImageProps {
     src: string
     placeholderSrc: string
     alt: string
-    width: string
-    height: string
 }
 
 const ProgressiveImage: React.FC<ProgressiveImageProps> = ({
     src,
     placeholderSrc,
     alt,
-    width,
-    height,
     ...rest
 }) => {
     const [imgSrc, setImgSrc] = useState(placeholderSrc || src)
