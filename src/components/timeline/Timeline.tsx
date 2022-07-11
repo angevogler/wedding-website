@@ -1,6 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
 
+import { breakpoints } from '../../styles/theme'
+
 export interface TimelineProps {
     children: any
 }
@@ -17,6 +19,14 @@ const TimelineContainer = styled.ul`
     flex-grow: 1;
     padding: 8px 16px;
     text-align: start;
+
+    @media only screen and (min-width: ${breakpoints.small}) {
+        width: 600px;
+    }
+
+    @media only screen and (min-width: ${breakpoints.medium}) {
+        width: 800px;
+    }
 `
 
 export default Timeline
