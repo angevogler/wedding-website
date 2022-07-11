@@ -8,6 +8,7 @@ import { timelineItems } from '../timelineItems'
 import { BodyLarge, H3, FancyH1 } from '../../typography'
 
 import WelcomeMessage from './WelcomeMessage'
+import DesktopTimeline from './DesktopTimeline'
 import {
     Timeline,
     TimelineItem,
@@ -21,47 +22,9 @@ import { TimelineContentPosition } from '../../timeline/TimelineContent'
 const HomePage: React.FC = () => (
     <HomePageContainer>
         <WelcomeMessage/>
+        
         <FancyH1>Our Story</FancyH1>
-        <DesktopTimelineContainer>
-            <Timeline>
-                {timelineItems.map(item => {
-                    if (item.position === TimelineContentPosition.LEFT) {
-                        return (
-                            <TimelineItem
-                                key={item.index}
-                                position={item.position}
-                                isAlternating
-                            >
-                                <TimelineContent position={item.position}>
-                                    <StyledH3>{item.title}</StyledH3>
-                                    <BodyLarge>{item.content}</BodyLarge>
-                                </TimelineContent>
-                                <TimelineSeparator>
-                                    <TimelineConnectorDot />
-                                    <TimelineConnector />
-                                </TimelineSeparator>
-                            </TimelineItem>
-                        )
-                    }
-                    return (
-                        <TimelineItem
-                            key={item.index}
-                            position={item.position}
-                            isAlternating
-                        >
-                            <TimelineSeparator>
-                                <TimelineConnectorDot />
-                                <TimelineConnector />
-                            </TimelineSeparator>
-                            <TimelineContent position={item.position}>
-                                <StyledH3>{item.title}</StyledH3>
-                                <BodyLarge>{item.content}</BodyLarge>
-                            </TimelineContent>
-                        </TimelineItem>
-                    )
-                })}
-            </Timeline>
-        </DesktopTimelineContainer>
+        <DesktopTimeline />
 
         <MobileTimelineContainer>
             <Timeline>
