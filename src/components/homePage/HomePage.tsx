@@ -12,6 +12,7 @@ import {
     TimelineContent,
     TimelineSeparator,
     TimelineConnector,
+    TimelineConnectorDot,
 } from '../timeline'
 
 const HomePage: React.FC = () => (
@@ -21,6 +22,7 @@ const HomePage: React.FC = () => (
             {timelineItems.map(item => (
                 <TimelineItem key={item.index}>
                     <TimelineSeparator>
+                        <TimelineConnectorDot />
                         <TimelineConnector />
                     </TimelineSeparator>
                     <TimelineContent>

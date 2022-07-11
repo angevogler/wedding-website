@@ -4,7 +4,7 @@ import styled from 'styled-components'
 import { color } from '../../styles/theme'
 
 const TimelineConnector: React.FC = () => (
-    <TimelineConnectorRoot />
+    <TimelineConnectorRoot/>
 )
 
 const TimelineConnectorRoot = styled.div`
