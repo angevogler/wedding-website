@@ -18,6 +18,10 @@ export const desktopNavHeight = 59;
 export const largeHeaderSize = expandedLogoHeight + desktopNavHeight;
 export const smallerHeaderSize = collapsedLogoHeight + desktopNavHeight;
 
+const HomePage = lazy(
+  () => import('./components/homePage/HomePage')
+)
+
 const EventsPage = lazy(
   () => import('./components/eventsPage/EventsPage')
 )
@@ -55,6 +59,10 @@ function App() {
         <ContentWrapper shrinkHeader={shrinkHeader}>
           <Suspense fallback={<div />}>
             <Routes>
+              <Route
+                path="/"
+                element={<HomePage />}
+              />
               <Route
                 path="/events"
                 element={<EventsPage />}
