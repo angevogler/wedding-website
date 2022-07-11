@@ -1,4 +1,4 @@
-import React, { FC } from 'react'
+import React, { FC, useCallback } from 'react'
 import styled from 'styled-components'
 import { useLocation, useNavigate } from 'react-router-dom'
 
@@ -15,6 +15,11 @@ const MobileNavDrawer: FC<MobileNavDrawerProps> = ({ open, onClose }) => {
     const location = useLocation()
     const navigate = useNavigate()
 
+    const navigateToPage = useCallback((url: string) => {
+        navigate(url)
+        onClose()
+    }, [navigate, onClose])
+
     return (
         <Drawer open={open} onClose={onClose}>
            <DrawerHeader>
@@ -29,7 +34,7 @@ const MobileNavDrawer: FC<MobileNavDrawerProps> = ({ open, onClose }) => {
                         return (
                             <SelectedMobileNavButton
                                 key={t.id}
-                                onClick={() => navigate(t.url)}
+                                onClick={() => onClose()}
                                 title={t.title}
                             >
                                 {t.title}
@@ -39,7 +44,7 @@ const MobileNavDrawer: FC<MobileNavDrawerProps> = ({ open, onClose }) => {
                     return(
                         <MobileNavButton
                             key={t.id}
-                            onClick={() => navigate(t.url)}
+                            onClick={() => navigateToPage(t.url)}
                             title={t.title}
                         >
                             {t.title}
