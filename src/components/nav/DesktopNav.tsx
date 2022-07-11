@@ -40,7 +40,8 @@ const NavContainer = styled.div<{shrinkHeader: boolean}>`
     @media only screen and (min-width: ${breakpoints.small}) {
         display: block;
         position: fixed;
-        top: ${props => props.shrinkHeader ? `${collapsedLogoHeight}px` : `${expandedLogoHeight}px`};
+        // top: ${props => props.shrinkHeader ? `${collapsedLogoHeight}px` : `${expandedLogoHeight}px`};
+        top: ${collapsedLogoHeight}px;
         left: 0;
         right: 0;
         padding: 0 72px;

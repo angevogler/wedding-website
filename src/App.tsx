@@ -31,7 +31,6 @@ function App() {
 
   const handleScroll = useCallback(() => {
     if (isMobile) return
-    console.log(window.pageYOffset)
 
     if (window.pageYOffset > 100 && !shrinkHeader) {
       setShrinkHeader(true)
@@ -88,7 +87,7 @@ const ContentWrapper = styled.div<{shrinkHeader: boolean}>`
   padding: 0 8px;
   @media only screen and (min-width: ${breakpoints.small}) {
     // margin-top: ${props => props.shrinkHeader ? `${smallerHeaderSize}px` : `${largeHeaderSize}px`};
-    margin-top: ${largeHeaderSize}px;  
+    margin-top: ${smallerHeaderSize}px;  
     padding: 0 72px
   }
 `

@@ -10,17 +10,19 @@ export interface HeaderProps {
     shrinkHeader: boolean;
 }
 
+// TODO: add back shrinking larger logo
 // TODO: add animation when the logo changes size
 const Header: React.FC<HeaderProps> = ({ shrinkHeader }) => {
     return (
         <HeaderContainer>
             <LogoContainer>
-            {shrinkHeader
+            {/* {shrinkHeader
             ? (
                 <CollapsedLogo src={collapsedLogo} alt="logo"/>
             ) : (
                 <FullSizeLogo src={fullsizeLogo} alt="logo"/>
-            )}
+            )} */}
+                <CollapsedLogo src={collapsedLogo} alt="logo"/>
             </LogoContainer>
         </HeaderContainer>
     )
