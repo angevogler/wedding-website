@@ -26,6 +26,10 @@ const EventsPage = lazy(
   () => import('./components/eventsPage/EventsPage')
 )
 
+const FAQPage = lazy(
+  () => import('./components/faqPage/FAQPage')
+)
+
 function App() {
   const [shrinkHeader, setShrinkHeader] = useState<boolean>(isMobile ? true : false)
 
@@ -65,6 +69,10 @@ function App() {
               <Route
                 path="/events"
                 element={<EventsPage />}
+              />
+              <Route
+                path="/faq"
+                element={<FAQPage />}
               />
             </Routes>
           </Suspense>
