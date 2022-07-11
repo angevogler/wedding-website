@@ -11,7 +11,7 @@ const Timeline: React.FC<TimelineProps> = ({ children }) => (
     </TimelineContainer>
 )
 
-const TimelineContainer = styled.div`
+const TimelineContainer = styled.ul`
     display: flex;
     flex-direction: column;
     flex-grow: 1;
