@@ -7,6 +7,7 @@ import GlobalFonts from './assets/fonts/fonts'
 import { breakpoints } from './styles/theme';
 import { Header } from './components/header';
 import { DesktopNav, MobileNav } from './components/nav';
+import { RegistryPage } from './components/registryPage';
 
 const isMobile = window.innerWidth < 600;
 
@@ -73,6 +74,10 @@ function App() {
               <Route
                 path="/faq"
                 element={<FAQPage />}
+              />
+              <Route
+                path="/registry"
+                element={<RegistryPage />}
               />
             </Routes>
           </Suspense>
