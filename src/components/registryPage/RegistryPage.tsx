@@ -2,11 +2,12 @@ import React from 'react'
 import styled from 'styled-components'
 
 import { color, breakpoints } from '../../styles/theme'
-import { BodyLarge } from '../typography'
+import { BodyLarge, FancyH1 } from '../typography'
 import { Hyperlink } from '../hyperlink'
 
 const RegistryPage: React.FC = () => (
     <RegistryPageRoot>
+        <PageTitle>Registry</PageTitle>
         <RegistryContainer>
             <RegistryMessage>
                 <BodyLarge>
@@ -21,19 +22,21 @@ const RegistryPage: React.FC = () => (
                 >
                     here
                 </Hyperlink>
-                .
                 </BodyLarge>
             </RegistryMessage>
         </RegistryContainer>
-        <RegistryIframe
-            id="registry-iframe"
-            src="https://registry.theknot.com/angela-vogler-david-pecunia-april-2023-nc/47901253"
-        />
     </RegistryPageRoot>
 )
 
 const RegistryPageRoot = styled.div`
-    height: calc(100vh - (234px + 72px + 24px));
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+`
+
+const PageTitle = styled(FancyH1)`
+    margin-bottom: 48px;
+    text-align: center;
 `
 
 const RegistryContainer = styled.div`
@@ -45,10 +48,9 @@ const RegistryContainer = styled.div`
     margin-left: auto;
     margin-right: auto;
     background-color: ${color.mainPalette.green40};
-    margin-top: 24px;
 
     @media only screen and (min-width: ${breakpoints.small}) {
-        display: none;
+        padding: 24px 16px;
     }
 `
 
@@ -65,17 +67,6 @@ const RegistryMessage = styled.div`
     @media only screen and (min-width: ${breakpoints.small}) {
         padding: 24px 16px;
         margin: 8px 32px;
-    }
-`
-
-const RegistryIframe = styled.iframe`
-    display: none;
-
-    @media only screen and (min-width: ${breakpoints.small}) {
-        display: block;
-        height: 100%;
-        width: 100%;
-        border: 1px solid ${color.mainPalette.green40};
     }
 `
 
