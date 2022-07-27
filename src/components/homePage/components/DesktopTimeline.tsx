@@ -169,10 +169,20 @@ const StyledH3 = styled(H3)`
 
 const Fall2016Image = styled(ProgressiveImage)`
     width: 275px;
-    margin-left: 90px;
+
+    @media only screen and (min-width: ${breakpoints.medium}) {
+        margin-left: 90px;
+    }
 `
 
-const Fall2017Container = styled.div``
+const Fall2017Container = styled.div`
+    display: flex;
+    flex-direction: column;
+
+    @media only screen and (min-width: ${breakpoints.medium}) {
+        display: block;
+    }
+`
 
 const Fall2017Image1 = styled(ProgressiveImage)`
     width: 275px;
@@ -180,11 +190,22 @@ const Fall2017Image1 = styled(ProgressiveImage)`
 
 const Fall2017Image2 = styled(ProgressiveImage)`
     width: 275px;
-    margin-top: -50px;
-    margin-left: 225px;
+    margin-top: 8px;
+
+    @media only screen and (min-width: ${breakpoints.medium}) {
+        margin-top: -50px;
+        margin-left: 225px;
+    }
 `
 
-const SummerFall2020Container = styled.div``
+const SummerFall2020Container = styled.div`
+    display: flex;
+    flex-direction: column;
+
+    @media only screen and (min-width: ${breakpoints.medium}) {
+        display: block;
+    }
+`
 
 const SummerFall2020Image1 = styled(ProgressiveImage)`
     width: 275px;
@@ -192,8 +213,12 @@ const SummerFall2020Image1 = styled(ProgressiveImage)`
 
 const SummerFall2020Image2 = styled(ProgressiveImage)`
     width: 275px;
-    margin-top: -50px;
-    margin-left: 90px;
+    margin-top: 8px;
+
+    @media only screen and (min-width: ${breakpoints.medium}) {
+        margin-top: -50px;
+        margin-left: 90px;
+    }
 `
 
 const EngagementPhotoImage = styled(ProgressiveImage)`
