@@ -48,9 +48,9 @@ const RegistryMessage = styled.div`
     display: flex;
     flex-direction: column;
     max-width: 800px;
-    margin-left: auto
+    margin-left: auto;
     margin-right: auto;
-    background-color: ${color.mainPalette.green20};
+    background-color: ${color.mainPalette.neutral0};
 
     @media only screen and (min-width: ${breakpoints.small}) {
         padding: 24px 16px;

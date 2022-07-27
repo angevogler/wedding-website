@@ -1,6 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
 
+import { color } from '../../styles/theme'
+
 export interface HyperlinkProps {
     id: string
     href: string
@@ -26,6 +28,14 @@ const Hyperlink: React.FC<HyperlinkProps> = ({
     </HyperlinkRoot>
 )
 
-const HyperlinkRoot = styled.a``
+const HyperlinkRoot = styled.a`
+    color: ${color.extendedPalette.coral.coral60};
+    text-decoration: none;
+
+    &:hover {
+        color: ${color.extendedPalette.coral.coral80};
+        text-decoration: underline;
+    }
+`
 
 export default Hyperlink
