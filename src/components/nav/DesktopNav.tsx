@@ -52,7 +52,6 @@ const NavContainer = styled.div<{shrinkHeader: boolean}>`
 
 const NavBorder = styled.div`
     width: calc(100vw - 144px); // screen width - padding
-    max-width: 1400px;
     background-color: ${color.mainPalette.coral20};
     height: 1px;
     margin-top: -2px;
