@@ -42,7 +42,7 @@ const MobileNavContainer = styled.div`
     background-color: ${color.mainPalette.neutral0};
     z-index: 1;
 
-    @media only screen and (min-width: ${breakpoints.small + 1}) {
+    @media only screen and (min-width: ${breakpoints.small}) {
         display: none;
     }
 `

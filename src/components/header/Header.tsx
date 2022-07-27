@@ -29,13 +29,13 @@ const Header: React.FC<HeaderProps> = ({ shrinkHeader }) => {
 }
 
 const HeaderContainer = styled.div`
-    @media only screen and (max-width: ${breakpoints.small}) {
-        display: none;
-    }
+    display: none;
 
-    display: flex;
-    justify-content: center;
-    z-index: 1;
+    @media only screen and (min-width: ${breakpoints.small}) {
+        display: flex;
+        justify-content: center;
+        z-index: 1;
+    }
 `
 
 const LogoContainer = styled.div`
