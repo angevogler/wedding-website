@@ -3,12 +3,24 @@ import styled from 'styled-components'
 
 import { color, breakpoints } from '../../styles/theme'
 import { BodyLarge } from '../typography'
+import { Hyperlink } from '../hyperlink'
 
 const RegistryPage: React.FC = () => (
     <RegistryContainer>
         <RegistryMessage>
             <BodyLarge>
-            Your love, laughter, and company on our wedding day is the greatest gift of all. However, should you wish to help us celebrate with a gift, you can find our registry here.
+            Your love, laughter, and company on our wedding day 
+            is the greatest gift of all. However, should you wish 
+            to help us celebrate with a gift, you can find our registry
+            {" "}
+            <Hyperlink
+                id="registry-link"
+                href="https://registry.theknot.com/angela-vogler-david-pecunia-april-2023-nc/47901253"
+                target="blank"
+            >
+                here
+            </Hyperlink>
+            .
             </BodyLarge>
         </RegistryMessage>
     </RegistryContainer>
