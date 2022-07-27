@@ -4,7 +4,7 @@ export const timelineItems = [
     {
         index: 0,
         title: 'Fall 2016',
-        content: "We had our first date in Charlotte at Birdsong Brewing followed by some wings and fried pickles from Lebowskis. Once we started hanging out that fall, we just never really stopped. That Christmas we unknowingly started one of of favorite traditions of going to see the Christmas lights at the Charlotte Motor Speedway and took our first picture together",
+        content: "We had our first date in Charlotte at Birdsong Brewing followed by some wings and fried pickles from Lebowskis. Once we started hanging out that fall, we just never really stopped. That Christmas we unknowingly started one of our favorite traditions of going to see the Christmas lights at the Charlotte Motor Speedway and took our first picture together",
         position: TimelineContentPosition.RIGHT,
     },
     {
