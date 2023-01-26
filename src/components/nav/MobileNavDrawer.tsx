@@ -10,6 +10,7 @@ import { navigationTabs } from '../../utilities/navigation'
 
 import { Button, ButtonVariant } from '../button'
 import { Drawer } from '../drawer'
+import RsvpButton from '../rsvp/RsvpButton'
 
 const MobileNavDrawer: FC<MobileNavDrawerProps> = ({ open, onClose }) => {
     const location = useLocation()
@@ -51,6 +52,10 @@ const MobileNavDrawer: FC<MobileNavDrawerProps> = ({ open, onClose }) => {
                         </MobileNavButton>
                 )
             })}
+
+            <RsvpButtonContainer>
+                <RsvpButton />
+            </RsvpButtonContainer>
            </DrawerBody>
         </Drawer>
     )
@@ -94,6 +99,14 @@ const MobileNavButton = styled.button`
 
 const SelectedMobileNavButton = styled(MobileNavButton)`
     background: ${color.mainPalette.green20};
+`
+
+const RsvpButtonContainer = styled.div`
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    padding: 12px;
+    width: 325px;
 `
 
 export default MobileNavDrawer
