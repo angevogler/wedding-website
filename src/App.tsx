@@ -8,6 +8,7 @@ import { breakpoints } from './styles/theme';
 import { Header } from './components/header';
 import { DesktopNav, MobileNav } from './components/nav';
 import { RegistryPage } from './components/registryPage';
+import { AccommodationsPage } from './components/accommodationsPage';
 
 const isMobile = window.innerWidth < 600;
 
@@ -78,6 +79,10 @@ function App() {
               <Route
                 path="/registry"
                 element={<RegistryPage />}
+              />
+              <Route
+                path="/accommodations"
+                element={<AccommodationsPage />}
               />
             </Routes>
           </Suspense>
