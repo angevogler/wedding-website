@@ -1,14 +1,19 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom'
 import styled from 'styled-components'
 
 import { color, fontFamily } from '../../styles/theme'
 import { Button } from '../button'
 
-const RsvpButton: React.FC = () => (
-    <StyledButton>
-        RSVP
-    </StyledButton>
-)
+const RsvpButton: React.FC = () => {
+    const navigate = useNavigate()
+
+    return (
+        <StyledButton onClick={() => navigate('/rsvp')}>
+            RSVP
+        </StyledButton>
+    )
+}
 
 const StyledButton = styled(Button)`
     width: 100%;
