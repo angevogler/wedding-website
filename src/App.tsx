@@ -9,6 +9,7 @@ import { Header } from './components/header';
 import { DesktopNav, MobileNav } from './components/nav';
 import { RegistryPage } from './components/registryPage';
 import { AccommodationsPage } from './components/accommodationsPage';
+import { RsvpPage } from './components/rsvp';
 
 const isMobile = window.innerWidth < 600;
 
@@ -83,6 +84,11 @@ function App() {
               <Route
                 path="/accommodations"
                 element={<AccommodationsPage />}
+              />
+
+              <Route
+                path="/rsvp"
+                element={<RsvpPage />}
               />
             </Routes>
           </Suspense>
