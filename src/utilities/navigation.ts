@@ -24,11 +24,11 @@ export const navigationTabs = [
         title: 'Registry',
         url: '/registry',
     },
-    // {
-    //     id: 5,
-    //     title: 'Accomodations',
-    //     url: '/accomodations',
-    // },
+    {
+        id: 5,
+        title: 'Accommodations',
+        url: '/accommodations',
+    },
     // {
     //     id: 6,
     //     title: 'Gallery',
