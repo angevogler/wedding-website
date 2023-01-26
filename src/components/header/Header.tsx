@@ -48,6 +48,7 @@ const HeaderContainer = styled.div`
         left: 0;
         right: 0;
         padding: 0px 72px;
+        background-color: ${color.mainPalette.neutral0};
     }
 `
 
