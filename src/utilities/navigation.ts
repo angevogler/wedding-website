@@ -9,11 +9,11 @@ export const navigationTabs = [
         title: 'Events',
         url: '/events',
     },
-    // {
-    //     id: 2,
-    //     title: 'Explore Asheville',
-    //     url: '/explore-asheville',
-    // },
+    {
+        id: 2,
+        title: 'Explore Asheville',
+        url: '/explore-asheville',
+    },
     {
         id: 3,
         title: 'FAQ',
