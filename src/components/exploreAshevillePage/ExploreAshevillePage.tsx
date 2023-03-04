@@ -3,6 +3,7 @@ import styled from 'styled-components'
 
 import { BodyLarge, FancyH1, H3 } from '../typography'
 import { ExpansionPanel } from '../expansionPanel'
+import ThingsToDo from './ThingsToDo'
 
 const ExploreAshevillePage: React.FC = () => (
     <PageRoot>
@@ -10,7 +11,7 @@ const ExploreAshevillePage: React.FC = () => (
         <ExpansionPanel
             title="Things To Do"
         >
-            <BodyLarge>Things To Do Placeholder</BodyLarge>
+            <ThingsToDo />
         </ExpansionPanel>
 
         <ExpansionPanel
