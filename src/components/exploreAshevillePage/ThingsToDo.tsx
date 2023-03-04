@@ -1,7 +1,6 @@
 import React from 'react'
-import styled from 'styled-components'
 
-import { H4, BodyLarge } from '../typography'
+import { H4 } from '../typography'
 import { Hyperlink } from '../hyperlink'
 import { ListContainer, ListItem, ListItemDescription } from './StyledList'
 

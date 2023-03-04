@@ -1,10 +1,13 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import { BodyLarge, FancyH1 } from '../typography'
+import { FancyH1 } from '../typography'
 import { ExpansionPanel } from '../expansionPanel'
 import ThingsToDo from './ThingsToDo'
 import Hiking from './Hiking'
+import CoffeeShops from './CoffeeShops'
+import Restaurants from './Restaurants'
+import BreweriesAndCocktails from './BreweriesAndCocktails'
 
 const ExploreAshevillePage: React.FC = () => (
     <PageRoot>
@@ -24,19 +27,19 @@ const ExploreAshevillePage: React.FC = () => (
         <ExpansionPanel
             title="Coffee Shops"
         >
-            <BodyLarge>Coffee Shops Placeholder</BodyLarge>
+            <CoffeeShops />
         </ExpansionPanel>
 
         <ExpansionPanel
             title="Restaurants"
         >
-            <BodyLarge>Restaurants Placeholder</BodyLarge>
+            <Restaurants />
         </ExpansionPanel>
 
         <ExpansionPanel
-            title="Breweries & Cocktails"
+            title="Breweries & Cocktail Bars"
         >
-            <BodyLarge>Breweries & Cocktails Placeholder</BodyLarge>
+            <BreweriesAndCocktails />
         </ExpansionPanel>
     </PageRoot>
 )
