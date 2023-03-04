@@ -17,7 +17,7 @@ export const questionsAndAnswers = [
     {
         index: 3,
         question: "What should I wear?",
-        answer: "Cocktail attire is requested. Suits or sports coats for men (tie optional), and cocktail dresses or jumpsuits for women. We respectfully ask that you do not wear colors traditionally reserved for the bride such as whites, ivories, or creams. Since our wedding is taking place during the spring, we encourage guests to wear pastels or brighter colors",
+        answer: "Cocktail attire is requested. Suits or sports coats for men, and cocktail dresses or jumpsuits for women. We respectfully ask that you do not wear colors traditionally reserved for the bride such as whites, ivories, or creams. Since our wedding is taking place during the spring, we encourage guests to wear pastels or brighter colors",
     },
     {
         index: 4,
