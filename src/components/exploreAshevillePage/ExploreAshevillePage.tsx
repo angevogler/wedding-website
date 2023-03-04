@@ -1,9 +1,10 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import { BodyLarge, FancyH1, H3 } from '../typography'
+import { BodyLarge, FancyH1 } from '../typography'
 import { ExpansionPanel } from '../expansionPanel'
 import ThingsToDo from './ThingsToDo'
+import Hiking from './Hiking'
 
 const ExploreAshevillePage: React.FC = () => (
     <PageRoot>
@@ -17,7 +18,7 @@ const ExploreAshevillePage: React.FC = () => (
         <ExpansionPanel
             title="Hiking"
         >
-            <BodyLarge>Hiking Placeholder</BodyLarge>
+            <Hiking />
         </ExpansionPanel>
 
         <ExpansionPanel

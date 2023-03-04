@@ -1,8 +1,9 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import { H4, H5, BodyLarge } from '../typography'
+import { H4, BodyLarge } from '../typography'
 import { Hyperlink } from '../hyperlink'
+import { ListContainer, ListItem, ListItemDescription } from './StyledList'
 
 const ThingsToDo: React.FC = () => (
     <ListContainer>
@@ -40,20 +41,5 @@ const ThingsToDo: React.FC = () => (
 
     </ListContainer>
 )
-
-const ListContainer = styled.ul`
-    padding: 0;
-`
-
-const ListItem = styled.li`
-    display: flex;
-    flex-direction: column;
-    list-style: none;
-    margin-bottom: 24px;
-`
-
-const ListItemDescription = styled(BodyLarge)`
-    margin: 8px 0;
-`
 
 export default ThingsToDo
