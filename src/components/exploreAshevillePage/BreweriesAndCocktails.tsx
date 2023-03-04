@@ -1,7 +1,6 @@
 import React from 'react'
 
 import { BodyLarge, H4 } from '../typography'
-import { Hyperlink } from '../hyperlink'
 import { ListContainer, ListItem, ListItemDescription } from './StyledList'
 
 const ThingsToDo: React.FC = () => (
