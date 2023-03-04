@@ -16,6 +16,9 @@ const ThingsToDo: React.FC = () => (
             <H4>Breweries</H4>
             <ul>
                 <li>
+                    <BodyLarge>Highland Brewing - the original is our wedding venue and has tons of outdoor activities, but there's also a taproom downtown!</BodyLarge>
+                </li>
+                <li>
                     <BodyLarge>Green Man</BodyLarge>
                 </li>
                 <li>

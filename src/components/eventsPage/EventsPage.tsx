@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import { Hyperlink } from '../hyperlink'
 import { BodyLarge, H5, FancyH1 } from '../typography'
 
 const EventsPage: React.FC = () => (
@@ -16,6 +17,13 @@ const EventsPage: React.FC = () => (
         <BodyLarge>
             Cocktail Hour and Reception to follow
         </BodyLarge>
+        <StyledHyperlink
+            id="venue-website"
+            href="https://highlandbrewing.com/private-events/"
+            target="_blank"
+        >
+            View Venue Website
+        </StyledHyperlink>
     </EventsPageContainer>
 )
 
@@ -32,6 +40,10 @@ const StyledH5 = styled(H5)`
 `
 
 const AddressContainer = styled.div`
+    margin: 12px;
+`
+
+const StyledHyperlink = styled(Hyperlink)`
     margin: 12px;
 `
 
