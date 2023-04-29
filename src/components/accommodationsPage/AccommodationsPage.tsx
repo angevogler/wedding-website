@@ -3,7 +3,6 @@ import styled from 'styled-components'
 
 import { color, breakpoints } from '../../styles/theme'
 import { BodyLarge, BodySmall, FancyH1 } from '../typography'
-import { Hyperlink } from '../hyperlink'
 
 const TransportationPage: React.FC = () => (
     <TransportationPageRoot>
