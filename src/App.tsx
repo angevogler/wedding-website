@@ -90,7 +90,7 @@ function App() {
                 element={<RegistryPage />}
               />
               <Route
-                path="/accommodations"
+                path="/Transportation"
                 element={<AccommodationsPage />}
               />
 

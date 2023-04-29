@@ -5,45 +5,32 @@ import { color, breakpoints } from '../../styles/theme'
 import { BodyLarge, BodySmall, FancyH1 } from '../typography'
 import { Hyperlink } from '../hyperlink'
 
-const AccommodationsPage: React.FC = () => (
-    <AccommodationsPageRoot>
-        <PageTitle>Accommodations</PageTitle>
+const TransportationPage: React.FC = () => (
+    <TransportationPageRoot>
+        <PageTitle>Transportation</PageTitle>
 
-        <AccommodationsContainer>
-            <AccommodationsMessage>
-                <BodyLarge>For your convenience a block of rooms have been reserved at the DoubleTree Biltmore Village and the Hampton Inn & Suites Asheville Biltmore Village. The two hotels are in the same parking lot and the shuttle for the wedding will leave from the DoubleTree</BodyLarge>
+        <TransportationContainer>
+            <TransportationMessage>
+                <BodyLarge>For your convenience we have two rounds of buses leaving for the venue</BodyLarge>
 
                 <HotelInfoContainer>
-                    <BodyLarge>DoubleTree Biltmore Village</BodyLarge>
-                    <BodySmall>115 Hendersonville Rd</BodySmall>
-                    <BodySmall>Asheville, NC 28803</BodySmall>
-                    <Hyperlink
-                        id="doubletree-link"
-                        href="https://www.hilton.com/en/attend-my-event/avlbmdt-vpw-7051239c-4ac2-4e10-a295-5626994fb891/"
-                        target="blank"
-                    >
-                        Book Now!
-                    </Hyperlink>
+                    <BodyLarge>4:15 pm</BodyLarge>
+                    <BodySmall>Loading begins at 4:00 pm</BodySmall>
+                    <BodySmall>One bus leaving from Hampton Inn Biltmore Village</BodySmall>
+                    <BodySmall>One bus leaving from DoubleTree Biltmore Village</BodySmall>
                 </HotelInfoContainer>
 
                 <HotelInfoContainer>
-                    <BodyLarge>Hampton Inn & Suites Asheville Biltmore Village</BodyLarge>
-                    <BodySmall>117 Hendersonville Rd</BodySmall>
-                    <BodySmall>Asheville, NC 28803</BodySmall>
-                    <Hyperlink
-                        id="hampton-inn-link"
-                        href="https://www.hilton.com/en/attend-my-event/avlbvhx-vpw-b7acfad4-b40e-4f6c-843f-b1a1e59b80fb/"
-                        target="blank"
-                    >
-                        Book Now!
-                    </Hyperlink>
+                    <BodyLarge>5:00 pm</BodyLarge>
+                    <BodySmall>Loading begins at 4:50 pm</BodySmall>
+                    <BodySmall>Two buses leaving from DoubleTree Biltmore Village</BodySmall>
                 </HotelInfoContainer>
-            </AccommodationsMessage>
-        </AccommodationsContainer>
-    </AccommodationsPageRoot>
+            </TransportationMessage>
+        </TransportationContainer>
+    </TransportationPageRoot>
 )
 
-const AccommodationsPageRoot = styled.div`
+const TransportationPageRoot = styled.div`
     display: flex;
     flex-direction: column;
     alignItems: center;
@@ -54,7 +41,7 @@ const PageTitle = styled(FancyH1)`
     text-align: center;
 `
 
-const AccommodationsContainer = styled.div`
+const TransportationContainer = styled.div`
     border: 1px solid ${color.mainPalette.green80};
     padding: 16px 8px;
     display: flex;
@@ -69,7 +56,7 @@ const AccommodationsContainer = styled.div`
     }
 `
 
-const AccommodationsMessage = styled.div`
+const TransportationMessage = styled.div`
     border: 1px solid ${color.mainPalette.green80};
     padding: 16px 8px 48px;
     display: flex;
@@ -92,4 +79,4 @@ const HotelInfoContainer = styled.div`
     margin-top: 24px;
 `
 
-export default AccommodationsPage
+export default TransportationPage

@@ -26,8 +26,8 @@ export const navigationTabs = [
     },
     {
         id: 5,
-        title: 'Accommodations',
-        url: '/accommodations',
+        title: 'Transportation',
+        url: '/transportation',
     },
     // {
     //     id: 6,
